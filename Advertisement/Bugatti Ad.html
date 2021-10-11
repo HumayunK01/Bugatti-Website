@@ -1,0 +1,67 @@
+<html>
+<head>
+    <title>Bugatti Advertisements</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/icon.png">
+</head>
+<body>
+    <body background="img/bg.png">
+
+    <div class="container">
+        <h1>Happiness isn't just around the corner, it is the Corner</h1>
+        <div class="row">
+            <div class="col">
+                <div class="feature-img">
+                    <img src="img/pic1.jpg" width="100%">
+                    <img src="img/play.png" class="play-btn">
+                    <img src="img/play.png" class="play-btn" onclick="playvideo('video/vid1.mp4')">
+                </div>
+            </div>
+            <div class="col">
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="img/pic2.jpg">
+                        <img src="img/play.png" class="play-btn" onclick="playvideo('video/vid2.mp4')">
+                    </div>
+                    <p>Bugatti Chiron World Premiere</p>
+                </div>
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="img/pic3.jpg">
+                        <img src="img/play.png" class="play-btn" onclick="playvideo('video/vid3.mp4')">
+                    </div>
+                    <p>Bugatti Divo</p>
+                </div>
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="img/pic4.jpg">
+                        <img src="img/play.png" class="play-btn" onclick="playvideo('video/vid4.mp4')">
+                    </div>
+                    <p>CR7 Testing Bugatti Chiron</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="video-player" id="videoplayer">
+        <video width="100%" controls autoplay id="myvideo">
+            <source src="video/vid1.mp4" type="video/mp4">
+        </video>
+        <img src="img/close.png" class="close-btn" onclick="stopvideo()">
+    </div>
+<script>
+    var videoplayer = document.getElementById("videoplayer");
+    var myvideo = document.getElementById("myvideo");
+
+    function stopvideo(){
+        videoplayer.style.display = "none";
+    }
+
+    function playvideo(file){
+        myvideo.src = file;
+        videoplayer.style.display = "block";
+    }
+</script>
+
+
+</body>
+</html>
